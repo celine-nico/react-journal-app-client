@@ -1,16 +1,29 @@
 import React from 'react';
+import { connect } from 'react-redux'
 
-import JournalsContainer from './JournalsContainer';
+import { fetchJournals } from './actions/journalsActions'
+import Router from './Router'
+import JournalsContainer from './JournalsContainer'
+import Header from './Header'
+import NavBar from './NavBar';
 
-const App = () => {
-  return (
-    <div>
-      <JournalsContainer /> 
-    </div>
-  );
+class App extends React.Component {
+  componentDidMount() {
+    this.props.fetchJournals()
+  }
+
+  render() {
+    return (
+      <div>
+        <Header />
+        <NavBar />
+        <Router />
+      </div>
+    );
+  }
 };
 
-export default App;
+export default connect(null, { fetchJournals })(App);
 
 
 

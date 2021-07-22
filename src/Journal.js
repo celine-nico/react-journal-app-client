@@ -2,16 +2,16 @@ import React from 'react';
 
 class Journal extends React.Component {
 
-    componentDidMount() {
-        const url = "http://127.0.0.1:3000/journals "
-        fetch(url)
-        .then(response => response.json())
-        .then(console.log)
-    }
 
     render() {
+        let entryDate = new Date(this.props.entry.date).toLocaleDateString()
+        console.log(entryDate)
         return (
-            <div></div>
+            <div className="entry" style={{textAlign: 'center'}}>
+                <h4>{entryDate}</h4>
+                <h4>{this.props.entry}</h4>
+
+            </div>
         )
 
     }

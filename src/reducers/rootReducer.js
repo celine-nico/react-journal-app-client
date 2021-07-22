@@ -4,5 +4,5 @@ import { journalsReducer } from './journalsReducer'
 
 
 export const rootReducer = combineReducers({
-    journals: journalsReducer
+    journalsReducer
 })

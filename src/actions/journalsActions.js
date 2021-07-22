@@ -16,6 +16,6 @@ export const addJournal = journal => {
             headers: { 'Content-Type': 'application/json'}
         })
         .then(response => response.json())
-        .then(journal => dispatch({ type: 'FETCH_JOURNALS', payload: journal }))
+        .then(journal => dispatch({ type: 'ADD_JOURNAL', payload: journal }))
     }
 }

@@ -1,9 +1,9 @@
 export const journalsReducer = (state = [], action) => {
     switch(action.type) {
         case 'FETCH_JOURNALS':
-            return action.payload
+            return [...action.payload]
         case 'ADD_JOURNAL':
-            return [...state, action.payload]
+            return [action.payload,...state]
         default:
             return state 
     }

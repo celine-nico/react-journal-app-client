@@ -1,0 +1,24 @@
+const JournalsContainer = () => {    
+    return (
+        <div>
+            {/* <JournalsForm /> */}
+            <h3 style={{textAlign: 'center'}}>ALL ENTRIES</h3>
+            {this.props.entry.map(entry => (
+                
+                <>
+                    <Journal key={entry.id} entry={entry} />
+                </>
+
+                
+                
+
+            ))}
+        </div>
+    )
+}
+
+function mapStateToProps(state) {
+    return {entry: state.journalsReducer}
+}
+
+export default connect(mapStateToProps)(JournalsContainer);

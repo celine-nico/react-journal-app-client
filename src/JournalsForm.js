@@ -21,11 +21,16 @@ class JournalsForm extends Component {
     handleSubmit = e => {
         e.preventDefault()
         this.props.addJournal(this.state)
+        this.setState({ 
+            date: "",
+            entry: "",
+            emotion: "content"
+        })
     }
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form className="form-style-3" onSubmit={this.handleSubmit}>
 
                 <input 
                     type="date" 
@@ -43,11 +48,12 @@ class JournalsForm extends Component {
                 />
                 <br />
                 <label>How Are You Feeling?:</label>
-                <select 
+                <select className="browser-default"
                     value={this.state.emotion}
                     onChange={this.handleChange}
                     name="emotion"
                 >
+                    <option value="" disabled selected>Choose your option</option>
                     <option value="content">Content</option>
                     <option value="frustrated">Frustrated</option>
                     <option value="confused">Confused</option>
