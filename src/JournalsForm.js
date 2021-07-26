@@ -59,6 +59,10 @@ class JournalsForm extends Component {
                     <option value="confused">Confused</option>
                     <option value="hopeful">Hopeful</option>
                     <option value="calm">Calm</option>
+                    <option value="isolated">Isolated</option>
+                    <option value="guilty">Guilty</option>
+                    <option value="exhausted">Exhausted</option>
+                    <option value="motivated">Motivated</option>
                 </select><br /><br />
                 <input type='submit' value="Add to Journal" />
             </form>
