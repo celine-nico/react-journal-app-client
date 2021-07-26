@@ -4,9 +4,12 @@ import { connect } from 'react-redux'
 import { fetchJournals } from './actions/journalsActions'
 import Journal from './Journal'
 import JournalsForm from './JournalsForm'
-import JournalsList from './JournalsList'
 
 class JournalsContainer extends Component {    
+
+    componentDidMount() {
+        this.props.fetchJournals()
+    }
 
     render() {
 
@@ -33,4 +36,4 @@ function mapStateToProps(state) {
     return {entry: state.journalsReducer}
 }
 
-export default connect(mapStateToProps)(JournalsContainer);
+export default connect(mapStateToProps, { fetchJournals })(JournalsContainer);

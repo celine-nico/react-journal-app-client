@@ -6,11 +6,9 @@ import Router from './Router'
 import JournalsContainer from './JournalsContainer'
 import Header from './Header'
 import NavBar from './NavBar';
+import Footer from './Footer'
 
 class App extends React.Component {
-  componentDidMount() {
-    this.props.fetchJournals()
-  }
 
   render() {
     return (
@@ -18,6 +16,7 @@ class App extends React.Component {
         <Header />
         <NavBar />
         <Router />
+        <Footer />
       </div>
     );
   }

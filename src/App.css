@@ -19,10 +19,9 @@ h1 {
 
 .header {
   background-color: #109776;
-  /* display: flex; */
   flex-direction: column;
   align-items: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(5px + 2vmin);
   color: rgb(24, 21, 21);
 }
 
@@ -30,3 +29,8 @@ h1 {
   color: #61dafb;
 }
 
+.entry {
+  background-color: #109776;
+  font-size: 5px;
+  font-style: Fantasy; 
+}

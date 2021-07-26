@@ -1,4 +1,5 @@
 body {
+  background-color: #5f043c;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +11,21 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.entry {
+  background-color: #3eccf0;
+  font-size: 5px;
+  font-style: Fantasy;
+  padding: 50px;
+  margin: 100px;
+}
+
+header {
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(221, 119, 144);
+  font-style: Fantasy;
+
 }
