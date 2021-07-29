@@ -3,13 +3,15 @@ import { connect } from 'react-redux';
 
 import { addJournal } from './actions/journalsActions'
 
+import { NavLink } from 'react-router-dom'
+
 class JournalsForm extends Component {
     constructor(props) {
         super(props)
         this.state = {
             date: "",
             entry: "",
-            emotion: "content"
+            emotion: ""
         }
     }
 
@@ -18,14 +20,28 @@ class JournalsForm extends Component {
         this.setState({ [name]: value })
     }
 
+    isBlank(value) {
+        return(value === undefined || value === null || value.trim() === "");
+    }
+
+    
+
+
     handleSubmit = e => {
         e.preventDefault()
-        this.props.addJournal(this.state)
-        this.setState({ 
-            date: "",
-            entry: "",
-            emotion: "content"
-        })
+        const date = this.state.date
+        const entry = this.state.entry
+        const emotion = this.state.emotion
+        
+        if (this.isBlank(date) !== true && this.isBlank(entry) !== true && this.isBlank(emotion) !== true) {
+
+            this.props.addJournal(this.state)
+            this.setState({ 
+                date: "",
+                entry: "",
+                emotion: "content"
+            })
+        }
     }
 
     render() {
