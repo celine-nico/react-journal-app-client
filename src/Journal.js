@@ -1,4 +1,5 @@
 import React from 'react';
+import Like from './Like'
 
 class Journal extends React.Component {
 
@@ -11,6 +12,7 @@ class Journal extends React.Component {
             <div className="entry" style={{textAlign: 'center'}}>
                 <h4>{entryDate}</h4>
                 <h4>{this.props.entry.entry}</h4>
+                <Like />
                 
             </div>
 
